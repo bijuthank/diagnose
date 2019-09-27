@@ -21,8 +21,6 @@ class Diagnose(MycroftSkill):
                 self.speak_dialog("COPDprognosis")
             elif d2 == "no":
                 self.speak_dialog("anythingElse")
-
-            
         elif desicion == "no":
             self.speak_dialog("anythingElse")
         
