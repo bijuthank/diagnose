@@ -14,9 +14,11 @@ class Diagnose(MycroftSkill):
 
     @intent_handler(IntentBuilder("").require("diagnose.invocation"))
     def handle_Diagnose_intent(self, message):
-        if self.ask_yesno("disease") == 'yes':
+        desicion = self.ask_yesno("disease")
+        if desicion == "yes":
             self.speak_dialog("otherInformation")
-        elif self.ask_yesno("disease") == "no":
+            
+        elif desicion == "no":
             self.speak_dialog("anythingElse")
         
         
