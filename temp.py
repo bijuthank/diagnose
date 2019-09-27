@@ -16,8 +16,8 @@
         elif user_response 
         
 
-
-
+#if self.ask_yesno("disease") == 'yes':
+#if response == "yes" : 
 
 
 
