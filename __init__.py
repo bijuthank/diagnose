@@ -12,18 +12,23 @@ class Diagnose(MycroftSkill):
         response = self.get_response(dialog)
         return response
 
-    
-    @intent_handler("disease.details")
-    def handle_diagnose_intent(self, message):
+    @intent_handler(IntentBuilder("").require("disease.details"))
+    def handle_disease_intent(self, message):
         self.speak_dialog("disease")
 
-    @intent_handler("copd.details")
-    def handle_copd(self, message):
+    @intent_handler(IntentBuilder("").require("copd.details"))
+    def handle_disease_intent(self, message):
         self.speak_dialog("COPDprognosis")
 
-    @intent_handler("therapy.details")
-    def handle_who_made_you_intent(self, message):
+    @intent_handler(IntentBuilder("").require("therapy.details"))
+    def handle_disease_intent(self, message):
         self.speak_dialog("therapy")
+
+
+
+
+
+
         
         
         
