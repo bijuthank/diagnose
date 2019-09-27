@@ -16,8 +16,7 @@ class Diagnose(MycroftSkill):
     def handle_Diagnose_intent(self, message):
         desicion = self.ask_yesno("disease")
         if desicion == "yes":
-            self.speak_dialog("otherInformation")
-            d2 = self.ask_yesno("otherInformation") 
+            d2 = self.speak_dialog("otherInformation")
             if d2 == "yes":
                 self.speak_dialog("COPDprognosis")
             elif d2 == "no":
