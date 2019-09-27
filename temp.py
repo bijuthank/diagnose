@@ -2,7 +2,7 @@
 
     def get_user_response(self, dialog):
         response = self.get_response(diagnose.invocation)
-    -    return response
+        return response
 
     @intent_handler(IntentBuilder("").require("diagnose.invocation"))
     def handle_knock_knock_intent(self, message):# They said help me
