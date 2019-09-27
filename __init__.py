@@ -13,15 +13,15 @@ class Diagnose(MycroftSkill):
         return response
 
     
-    @intent_file_handler("diagnose.invocation")
+    @intent_handler("diagnose.invocation")
     def handle_diagnose_intent(self, message):
         self.speak_dialog("disease")
 
-    @intent_file_handler("copd.details")
+    @intent_handler("copd.details")
     def handle_copd(self, message):
         self.speak_dialog("COPDprognosis")
 
-    @intent_file_handler("therapy.details")
+    @intent_handler("therapy.details")
     def handle_who_made_you_intent(self, message):
         self.speak_dialog("therapy")
         
