@@ -25,10 +25,7 @@ class Diagnose(MycroftSkill):
             self.speak_dialog("anythingElse")
         
         
-        #response = self.get_user_response("yes.response")
-        #if response  == "yes":
-            
-        #self.speak_dialog("otherinformation")
+        
 
 def create_skill():
     return Diagnose()
