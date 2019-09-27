@@ -8,7 +8,7 @@ LOGGER = getLogger(__name__)
 class HelpMeSkill(MycroftSkill):
 
     def get_user_response(self, dialog):
-        response = self.get_response(disease)
+        response = self.get_response(diagnose.invocation)
         return response
 
     @intent_handler(IntentBuilder("").require("diagnose.invocation"))
