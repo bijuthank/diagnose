@@ -8,10 +8,10 @@ LOGGER = getLogger(__name__)
 class HelpMeSkill(MycroftSkill):
 
     def get_user_response(self, dialog):
-        response = self.get_response(dialog)
+        response = self.get_response(disease)
         return response
 
-    @intent_handler(IntentBuilder("").require("help.me"))
+    @intent_handler(IntentBuilder("").require("diagnose.invocation"))
     def handle_knock_knock_intent(self, message):# They said help me
         #ask for body part
         bodypart = self.get_user_response("disease")
