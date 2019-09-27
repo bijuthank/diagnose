@@ -19,6 +19,18 @@
 #if self.ask_yesno("disease") == 'yes':
 #if response == "yes" : 
 
+@intent_handler(IntentBuilder("").require("diagnose.invocation"))
+    def handle_Diagnose_intent(self, message):
+decision = self.ask_yesno("disease")
+        if decision == "yes":
+            d2 = self.ask_yesno("COPDprognosis")
+            if d2 == "yes":
+                d3 = self.ask_yesno("therapy")
+            elif d2 == "no":
+                self.speak_dialog("OKThankYou")
+        elif desicion == "no":
+            self.speak_dialog("OKThankYou")
+
 
 
 
