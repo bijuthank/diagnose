@@ -14,7 +14,7 @@ class Diagnose(MycroftSkill):
     def handle_DiagnoseMe_intent(self, message):
         #if self.ask_yesno("disease") == 'yes':
         response = self.get_user_response("yes.response")
-            if response == "yes": 
+            if response : 
                 self.speak_dialog("otherinformation")
 
  
