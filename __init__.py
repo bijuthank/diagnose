@@ -15,7 +15,7 @@ class Diagnose(MycroftSkill):
     @intent_handler(IntentBuilder("").require("diagnose.invocation"))
     def handle_Diagnose_intent(self, message):
         response = self.get_user_response("yes.response")
-        if "yes" in response:
+        if response  == "yes":
             self.speak("there was a yes in your answer")
         #self.speak_dialog("otherinformation")
 
