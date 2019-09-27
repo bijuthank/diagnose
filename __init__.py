@@ -5,7 +5,7 @@ from mycroft.util.log import getLogger
 __author__ = 'Lucas Vogel'
 LOGGER = getLogger(__name__)
 
-class DiagnoseMeSkill(MycroftSkill):
+class Diagnose(MycroftSkill):
     @intent_handler(IntentBuilder("").require("diagnose.invocation"))
     def handle_DiagnoseMe_intent(self, message):
         #self.speak_dialog("disease", expect_response=True)
