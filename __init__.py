@@ -13,7 +13,7 @@ class Diagnose(MycroftSkill):
         return response
 
     
-    @intent_handler("diagnose.invocation")
+    @intent_handler("disease.details")
     def handle_diagnose_intent(self, message):
         self.speak_dialog("disease")
 
