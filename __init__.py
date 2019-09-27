@@ -14,6 +14,6 @@ class Diagnose(MycroftSkill):
 
  
 def create_skill():
-    return HelpMeSkill()
+    return Diagnose()
 
 
