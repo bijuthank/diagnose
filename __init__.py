@@ -8,9 +8,8 @@ LOGGER = getLogger(__name__)
 class Diagnose(MycroftSkill):
     @intent_handler(IntentBuilder("").require("diagnose.invocation"))
     def handle_DiagnoseMe_intent(self, message):
-        #self.speak_dialog("disease", expect_response=True)
         if self.ask_yesno("disease") == 'yes':
-                self.speak_dialog("otherinformation")
+            self.speak_dialog("otherinformation")
 
  
 def create_skill():
