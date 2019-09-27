@@ -14,7 +14,7 @@ class HelpMeSkill(MycroftSkill):
     @intent_handler(IntentBuilder("").require("help.me"))
     def handle_knock_knock_intent(self, message):# They said help me
         #ask for body part
-        bodypart = self.get_user_response("which.part")
+        bodypart = self.get_user_response("disease")
         # They said the body part
         specificypart = self.get_user_response("what.exactly")
         #they specify the body part
