@@ -13,7 +13,8 @@ class HelpMeSkill(MycroftSkill):
 
     @intent_handler(IntentBuilder("").require("disease.details"))
     def handle_knock_knock_intent(self, message):# They said help me
-        self.speak_dialog("disease")
+        self.speak("test")
+        #self.speak_dialog("disease")
 # class Diagnose(MycroftSkill):
 
 #     @intent_handler(IntentBuilder("").require("disease.details"))
