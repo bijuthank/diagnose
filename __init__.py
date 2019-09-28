@@ -12,12 +12,6 @@ class Diagnose(MycroftSkill):
         response = self.get_response(dialog)
         return response
 
-
-
-
-
-
-
     @intent_handler(IntentBuilder("").require("disease.details"))
     def handle_Diagnose_intent(self, message):
         decision = self.ask_yesno("disease")
@@ -30,16 +24,6 @@ class Diagnose(MycroftSkill):
         elif desicion == "no":
             self.speak_dialog("OKThankYou")
    
-
-
-
-
-
-
-        
-        
-        
-
 def create_skill():
     return Diagnose()
 
