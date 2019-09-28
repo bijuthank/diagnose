@@ -12,17 +12,24 @@ class Diagnose(MycroftSkill):
         response = self.get_response(dialog)
         return response
 
-    @intent_handler(IntentBuilder("").require("disease.details"))
-    def handle_disease_intent(self, message):
-        self.speak_dialog("disease")
 
-    @intent_handler(IntentBuilder("").require("copd.details"))
-    def handle_disease_intent(self, message):
-        self.speak_dialog("COPDprognosis")
 
-    @intent_handler(IntentBuilder("").require("therapy.details"))
-    def handle_disease_intent(self, message):
-        self.speak_dialog("therapy")
+
+
+
+
+    @intent_handler(IntentBuilder("").require("diagnose.invocation"))
+    def handle_Diagnose_intent(self, message):
+        decision = self.ask_yesno("disease")
+        if decision == "yes":
+            d2 = self.ask_yesno("COPDprognosis")
+            if d2 == "yes":
+                d3 = self.ask_yesno("therapy")
+            elif d2 == "no":
+                self.speak_dialog("OKThankYou")
+        elif desicion == "no":
+            self.speak_dialog("OKThankYou")
+   
 
 
 
