@@ -14,17 +14,17 @@ class HelpMeSkill(MycroftSkill):
 
 
 
-   @intent_handler(IntentBuilder("").require("disease.details"))
+    @intent_handler(IntentBuilder("").require("disease.details"))
     def handle_disease_intent(self, message):
         self.speak_dialog("disease")
 
-    @intent_handler(IntentBuilder("").require("copd.details"))
-    def handle_copd_intent(self, message):
-        self.speak_dialog("COPDprognosis")
+    # @intent_handler(IntentBuilder("").require("copd.details"))
+    # def handle_copd_intent(self, message):
+    #     self.speak_dialog("COPDprognosis")
 
-    @intent_handler(IntentBuilder("").require("therapy.details"))
-    def handle_therapy_intent(self, message):
-        self.speak_dialog("therapy") 
+    # @intent_handler(IntentBuilder("").require("therapy.details"))
+    # def handle_therapy_intent(self, message):
+    #     self.speak_dialog("therapy") 
         #self.speak_dialog("disease")
 # class Diagnose(MycroftSkill):
 
