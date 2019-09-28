@@ -14,7 +14,7 @@ class Diagnose(MycroftSkill):
 
     @intent_handler(IntentBuilder("").require("disease.details"))
     def handle_diagnose_intent(self, message):
-        self.speak("You have a chronic obstructive lung disease. In short it is called COPD. Do you want further informations about your disease?")
+        self.speak("disease")
         
    
 def create_skill():
